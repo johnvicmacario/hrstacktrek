@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat;
+}
+/* For WebKit-based browsers (Chrome, Safari, Opera) */
+::-webkit-scrollbar {
+  width: 4px; /* Set the width of the scroll bar */
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Set the background color of the scroll bar track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(255 90 31); /* Set the color of the scroll bar handle */
+  border-radius: 50px 50px 50px 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(
+    240,
+    124,
+    81
+  ); /* Set the color of the scroll bar handle on hover */
+}
+@media screen and (min-width: 300px) and (max-width: 1026px) {
+  .stack {
+    background-image: url(../assets/stacktrek.png);
+    background-repeat: no-repeat;
+    background-size: 100px;
+    margin-top: 4rem;
+    background-position-x: center;
+    background-position-y: bottom;
+  }
+  .LoginForm {
+    margin-left: 3rem;
+    margin-right: 2rem;
+    padding-top: 5rem;
+    max-height: 100vh;
+    overflow-y: hidden;
+  }
+  .LoginForm input {
+    height: 3rem;
+  }
+  .LoginForm button {
+    border-radius: 20px 0px 20px 20px;
+  }
+}
+@media screen and (min-width: 1026px) {
+  .background {
+    background-image: url(../assets/Background.png);
+    background-size: cover;
+  }
+  .Table {
+    z-index: 0;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  .Tables {
+    z-index: 0;
+    max-height: 60vh;
+    overflow-y: auto;
+    max-width: 66rem;
+  }
+  .Form {
+    z-index: auto;
+    position: relative;
+  }
+  .search_icon {
+    position: absolute;
+    right: 180px;
+  }
+  .Data {
+    font-size: 10px;
+  }
+  .side {
+    z-index: 10;
+  }
+  .image {
+    margin-top: -100px;
+  }
+  .ul {
+    margin-top: 100px;
+  }
+  .dropdown {
+    position: absolute;
+    left: 13rem;
+    top: 23rem;
+    border-radius: 0 15px 15px 0;
+  }
+  .dropdown ul li a:hover {
+    background: rgb(231, 231, 231);
+    color: rgb(255 90 31);
+    border-radius: 0 15px 15px 0;
+  }
+  .avatar {
+    height: 50px;
+    width: 50px;
+  }
+
+  .logo {
+    background-image: url(../assets/logo.png);
+    background-repeat: no-repeat;
+    margin-top: 2rem;
+    margin-left: 2rem;
+  }
+  .stack {
+    background-image: url(../assets/stacktrek.png);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-size: 30%;
+    margin-top: 3rem;
+    margin-left: -10rem;
+    z-index: 10;
+  }
+  .LoginForm {
+    margin-top: 10rem;
+    margin-left: 5rem;
+  }
+  .LoginForm input {
+    height: 3rem;
+  }
+  .LoginForm button {
+    border-radius: 20px 0px 20px 20px;
+  }
+  .Font {
+    font-size: 50px;
+  }
+  /* Modal Styles */
+  .Modal {
+    opacity: 0;
+    transform: translateY(50%);
+    animation: scroll-in 0.5s ease-out forwards;
+    scroll-behavior: smooth;
+  }
+
+  @keyframes scroll-in {
+    0% {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.progressBody {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.Box {
+  width: 70vw;
+}
+
+.BoxMonth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill {
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+
+.outer {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  padding: 20px;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.inner {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+
+#number {
+  font-weight: 600px;
+  color: #555;
+}
+
+.user_circle {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+  animation: circleAnim 2s linear forwards;
+}
+
+.user_svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes circleAnim {
+  100% {
+    stroke-dashoffset: var(--dash-offset);
+  }
+}
+
+.ExpenseModal {
+  opacity: 0;
+  transform: translateY(50%);
+  animation: scroll-in 0.5s ease-out forwards;
+  scroll-behavior: smooth;
+  height: 30rem;
+  width: 25rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .my-div {
+    display: none;
+  }
+}
